@@ -16,11 +16,14 @@ client.on('interactionCreate', async interaction => {
 	const { commandName } = interaction;
 
 	if (commandName === 'ping') {
-		await interaction.reply('Pong!');
+	    await interaction.reply('Pong!');
 	} else if (commandName === 'server') {
-		await interaction.reply('Server info.');
+	    await interaction.reply
+	    (
+		`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`
+	    );
 	} else if (commandName === 'user') {
-		await interaction.reply('User info.');
+	    await interaction.reply('User info.');
 	}
 });
 
