@@ -15,7 +15,7 @@ for (const file of commandFiles) {
 client.once('ready', () => {
 	console.log('Ready!');
 });
-
+// test change 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
